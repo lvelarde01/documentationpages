@@ -1,0 +1,371 @@
+<link
+  rel="stylesheet"
+  href="all.css"
+/>
+<nav id="navbar">
+  <header>DOCUMENTATIONS</header>
+  <a class="nav-link" href="#introductions">Introductions</a>
+  <a class="nav-link" href="#basic">Basic</a>
+  <a class="nav-link" href="#hello_world">Hello world</a>
+  <a class="nav-link" href="#variable_type">Variable Type</a>
+  <a class="nav-link" href="#constant">Constant</a>
+  <a class="nav-link" href="#operator_type">Operator Type</a>
+  <a class="nav-link" href="#references">References</a>
+</nav>
+<main id="main-doc">
+
+  <section id="introductions" class="main-section">
+    <header>Introductions</header>
+    <p>PHP started out as a small open source project that evolved as more and more people found out how useful it was. Rasmus Lerdorf unleashed the first version of PHP way back in 1994</p>
+    <p>PHP is a server side scripting language that is embedded in HTML. It is used to manage dynamic content, databases, session tracking, even build entire e-commerce sites</p>
+    <code>
+      &lt;?php 
+        /*code start*/
+      ?&gt; 
+    </code>
+    <ul>
+      <li>PHP is a recursive acronym for "PHP: Hypertext Preprocessor</li>
+      <li>It is integrated with a number of popular databases, including MySQL, PostgreSQL, Oracle, Sybase, Informix, and Microsoft SQL Server</li>
+      <li>PHP is pleasingly zippy in its execution, especially when compiled as an Apache module on the Unix side. The MySQL server, once started, executes even very complex queries with huge result sets in record-setting time</li>
+      <li>PHP supports a large number of major protocols such as POP3, IMAP, and LDAP. PHP4 added support for Java and distributed object architectures (COM and CORBA), making n-tier development a possibility for the first time</li>
+    </ul>
+  </section>
+  <section id="basic" class="main-section">
+    <header>Basic</header>
+     <p>This chapter will give you an idea of very basic syntax of PHP and very important to make your PHP foundation strong</p>
+    <p>Short tags are, as one might expect, the shortest option You must do one of two things to enable PHP to recognize the tags</p>
+    <code>
+      &lt;? 
+        /*Alternative code start*/
+      ?&gt; 
+    </code>
+      <ul>
+      <li>Choose the --enable-short-tags configuration option when you're building PHP.</li>
+      <li>Set the short_open_tag setting in your php.ini file to on. This option must be disabled to parse XML with PHP because the same syntax is used for XML tags</li>
+    </ul>
+  </section>
+  <section id="hello_world" class="main-section">
+    <header>Hello world</header>
+     <p>in php, there is a function. which we are going to use to make our first code sample.</p>
+    <p>This function is used to illustrate text, variables and different types of information. la when we know as echo + "what we want to show"+ ; . For this we will illustrate an example.</p>
+    <code>
+        &lt;? <br>
+        /* Show First Message for All World*/<br>
+        echo "Hello World";<br>
+      ?&gt;
+      
+    </code>
+  </section>
+  <section id="variable_type" class="main-section">
+    <header>Variable Type</header>
+     <p>The main way to store information in the middle of a PHP program is by using a variable</p>
+    <p>Here are the most important things to know about variables in PHP</p>
+    <code class="text-left">
+      &lt;? <br>
+        int $variable_number=0; /*Variable type number*/<br>
+        string $variable_text="texto"; /*Variable type text*/<br>
+        double $variable_decimal=0.00; /*Variable type decimal*/<br>
+        bool $variable_booleans=0.00; /*Variable type booleans*/<br>
+        $variable_arrays=array(); /*Variable type arrays*/<br>
+      ?&gt;
+    </code>
+    <p>PHP has a total of eight data types which we use to construct our variables</p>
+    <ul>
+      <li><strong>Integers</strong> − are whole numbers, without a decimal point, like 4195.</l>
+      <li><strong>Doubles</strong> − are floating-point numbers, like 3.14159 or 49.1.</li>
+      <li><strong>Booleans</strong> − have only two possible values either true or false.</li>
+      <li><strong>Strings</strong> − are sequences of characters, like 'PHP supports string operations.'</li>
+      <li><strong>Arrays</strong> − are named and indexed collections of other values.</li>
+    </ul>
+  </section>
+  <section id="constant" class="main-section">
+    <header>Constant</header>
+     <p>A constant is a name or an identifier for a simple value. A constant value cannot change during the execution of the script. By default, a constant is case-sensitive. By convention, constant identifiers are always uppercase. A constant name starts with a letter or underscore, followed by any number of letters, numbers, or underscores. If you have defined a constant, it can never be changed or undefined.</p>
+    <p>To define a constant you have to use define() function and to retrieve the value of a constant, you have to simply specifying its name. Unlike with variables, you do not need to have a constant with a $. You can also use the function constant() to read a constant's value if you wish to obtain the constant's name dynamically.</p>
+    <h3 class="text-left">constant() function</h3>
+    <p>As indicated by the name, this function will return the value of the constant.</p>
+    <p>This is useful when you want to retrieve value of a constant, but you do not know its name, i.e. It is stored in a variable or returned by a function</p>
+    <code class="text-left">
+        &lt;? <br>
+         define("MINSIZE", 50);<br><br>
+
+         echo MINSIZE;<br>
+         echo constant("MINSIZE"); // same thing as the previous line<br>
+      ?&gt;
+    </code>
+    <p>Only scalar data (boolean, integer, float and string) can be contained in constants.</p>
+  </section>
+<section id="operator_type" class="main-section">
+    <header>Operator Type</header>
+     <p><strong>What is Operator?</strong> Simple answer can be given using expression 4 + 5 is equal to 9. Here 4 and 5 are called operands and + is called operator. PHP language supports following type of operators.</p>
+  <ul> 
+  <li>Arithmetic Operators</li>
+  <li>Comparison Operators</li>
+  <li>Logical (or Relational) Operators</li>
+  <li>Assignment Operators</li>
+  <li>Conditional (or ternary) Operators</li>
+  </ul>
+    <p>Lets have a look on all operators one by one.</p>
+  <h3>Arithmetic Operators</h3>
+  <p>There are following arithmetic operators supported by PHP language −</p>
+
+<p>Assume variable A holds 10 and variable B holds 20 then −</p>
+
+    <code class="text-left">
+        &lt;? <br>
+         $a = 42;<br>
+         $b = 20;<br>
+         
+         $c = $a + $b;<br>
+         echo "Addtion Operation Result: $c ";<br/>
+         
+         $c = $a - $b;
+         echo "Substraction Operation Result: $c ";<br/>
+         
+         $c = $a * $b;
+         echo "Multiplication Operation Result: $c ";<br/>
+         
+         $c = $a / $b;
+         echo "Division Operation Result: $c ";<br/>
+         
+         $c = $a % $b;
+         echo "Modulus Operation Result: $c ";<br/>
+         
+         $c = $a++; 
+         echo "Increment Operation Result: $c ";<br/>
+         
+         $c = $a--; 
+         echo "Decrement Operation Result: $c ";<br/>
+      ?&gt;
+    </code>
+    <h3>Comparison Operators</h3>
+  <p>There are following comparison operators supported by PHP language</p>
+
+<p>Assume variable A holds 10 and variable B holds 20 then −</p>
+
+    <code class="text-left">
+       &lt;? <br>
+      $a = 42;<br/>
+         $b = 20;<br/>
+      
+         if( $a == $b ) {<br/>
+            echo "TEST1 : a is equal to b";<br/>
+         }else {<br/>
+            echo "TEST1 : a is not equal to b";<br/>
+         }<br/>
+      
+         if( $a > $b ) {<br/>
+            echo "TEST2 : a is greater than  b";<br/>
+         }else {<br/>
+            echo "TEST2 : a is not greater than b";<br/>
+         }<br/>
+      
+         if( $a < $b ) {<br/>
+            echo "TEST3 : a is less than  b";<br/>
+         }else {<br/>
+            echo "TEST3 : a is not less than b";<br/>
+         }<br/>
+      
+         if( $a != $b ) {<br/>
+            echo "TEST4 : a is not equal to b";<br/>
+         }else {<br/>
+            echo "TEST4 : a is equal to b";<br/>
+         }<br/>
+      
+         if( $a >= $b ) {<br/>
+            echo "TEST5 : a is either greater than or equal to b";<br/>
+         }else {<br/>
+            echo "TEST5 : a is neither greater than nor equal to b";<br/>
+         }<br/>
+      
+         if( $a <= $b ) {<br/>
+            echo "TEST6 : a is either less than or equal to b";<br/>
+         }else {<br/>
+            echo "TEST6 : a is neither less than nor equal to b";<br/>
+         }<br/>
+      ?&gt;
+      
+      </code>
+        <h3>Logical Operators</h3>
+        <p>There are following logical operators supported by PHP language</p>
+
+      <p>Assume variable A holds 10 and variable B holds 20 then −</p>
+        <code class="text-left">
+             &lt;? <br>
+          $a = 42;<br/>
+         $b = 0;<br/>
+         
+         if( $a && $b ) {<br/>
+            echo "TEST1 : Both a and b are true";<br/>
+         }else{<br/>
+            echo "TEST1 : Either a or b is false";<br/>
+         }<br/>
+         
+         if( $a and $b ) {<br/>
+            echo "TEST2 : Both a and b are true";<br/>
+         }else{<br/>
+            echo "TEST2 : Either a or b is false";<br/>
+         }<br/>
+         
+         if( $a || $b ) {<br/>
+            echo "TEST3 : Either a or b is true";<br/>
+         }else{<br/>
+            echo "TEST3 : Both a and b are false";<br/>
+         }<br/>
+         
+         if( $a or $b ) {<br/>
+            echo "TEST4 : Either a or b is true";<br/>
+         }else {<br/>
+            echo "TEST4 : Both a and b are false";<br/>
+         }<br/>
+         
+         $a = 10;<br/>
+         $b = 20;<br/>
+         
+         if( $a ) {<br/>
+            echo "TEST5 : a is true ";<br/>
+         }else {<br/>
+            echo "TEST5 : a  is false";<br/>
+         }<br/>
+         
+         if( $b ) {<br/>
+            echo "TEST6 : b is true ";<br/>
+         }else {<br/>
+            echo "TEST6 : b  is false";<br/>
+         }<br/>
+         
+         if( !$a ) {<br/>
+            echo "TEST7 : a is true ";<br/>
+         }else {<br/>
+            echo "TEST7 : a  is false";<br/>
+         }<br/>
+         
+         if( !$b ) {<br/>
+            echo "TEST8 : b is true ";<br/>
+         }else {<br/>
+            echo "TEST8 : b  is false";<br/>
+         }<br/>
+        ?&gt;
+      </code>
+      <h3>Assignment Operators</h3>
+      <p>There are following assignment operators supported by PHP language −</p>
+        <code class="text-left">
+             &lt;? <br>
+                     $a = 42;<br/>
+         $b = 20;<br/>
+         <br/>
+         $c = $a + $b;<br/>  
+         echo "Addtion Operation Result: $c";<br/>
+         <br/>
+         $c += $a;<br/>  
+         echo "Add AND Assigment Operation Result: $c";<br/>
+         <br/>
+         $c -= $a;<br/>
+         echo "Subtract AND Assignment Operation Result: $c";<br/>
+         <br/>
+         $c *= $a;<br/> 
+         echo "Multiply AND Assignment Operation Result: $c";<br/>
+         <br/>
+         $c /= $a;<br/> 
+         echo "Division AND Assignment Operation Result: $c";<br/>
+         <br/>
+         $c %= $a;<br/>
+         echo "Modulus AND Assignment Operation Result: $c";<br/>
+              ?&gt;
+      </code>
+  <h3>Conditional Operator</h3>
+      <p>There is one more operator called conditional operator. This first evaluates an expression for a true or false value and then execute one of the two given statements depending upon the result of the evaluation. The conditional operator has this syntax −</p>
+        <code class="text-left">
+             &lt;? <br>
+               $a = 10;<br/>
+         $b = 20;<br/>
+         <br/>
+         /* If condition is true then assign a to result otheriwse b */<br/>
+         $result = ($a > $b ) ? $a :$b;<br/>
+         <br/>
+         echo "TEST1 : Value of result is $result";<br/>
+         <br/>
+         /* If condition is true then assign a to result otheriwse b */<br/>
+         $result = ($a < $b ) ? $a :$b;<br/>
+         <br/>
+         echo "TEST2 : Value of result is $result";<br/>
+            ?&gt;
+        </code>
+  <h3>Operators Categories</h3>
+      <p>All the operators we have discussed above can be categorised into following categories</p>
+  <ul>
+    <li>Unary prefix operators, which precede a single operand.</li>
+    <li>Binary operators, which take two operands and perform a variety of arithmetic and logical operations.</li>
+    <li>The conditional operator (a ternary operator), which takes three operands and evaluates either the second or third expression, depending on the evaluation of the first expression.</li>
+    <li>Assignment operators, which assign a value to a variable.</li>
+  </ul>
+  <h3>Precedence of PHP Operators</h3>
+  <p>Operator precedence determines the grouping of terms in an expression. This affects how an expression is evaluated. Certain operators have higher precedence than others; for example, the multiplication operator has higher precedence than the addition operator −</p>
+  <p>For example x = 7 + 3 * 2; Here x is assigned 13, not 20 because operator * has higher precedence than + so it first get multiplied with 3*2 and then adds into 7.</p>
+  <p>Here operators with the highest precedence appear at the top of the table, those with the lowest appear at the bottom. Within an expression, higher precedence operators will be evaluated first.</p>
+  
+  <table class="table table-bordered text-center">
+<thead>
+   <tr>
+<th>Category</th>
+<th>Operator</th>
+<th>Associativity</th>
+</tr>
+</thead> 
+<tbody>
+<tr>
+<td>Unary</td>
+<td>! ++ --</td> 
+<td>Right to left</td>
+</tr>
+<tr>
+<td>Multiplicative</td> 
+<td>*  /  %</td>
+<td>Left to right</td> 
+</tr> 
+<tr> 
+<td>Additive</td>
+<td>+  -</td> 
+<td>Left to right</td> 
+</tr>
+<tr> 
+<td>Relational</td>
+<td>&lt; &lt;=  &gt; &gt;=</td> 
+<td>Left to right</td> 
+</tr>
+<tr> 
+<td>Equality</td> 
+<td>==  !=</td> 
+<td>Left to right</td> 
+</tr> 
+<tr> 
+<td>Logical AND</td>
+<td>&amp;&amp;</td> 
+<td>Left to right</td> 
+</tr> 
+<tr>
+<td>Logical OR</td> 
+<td>||</td> 
+<td>Left to right</td> 
+</tr> 
+<tr> 
+<td>Conditional</td>
+<td>?:</td> 
+<td>Right to left</td> 
+</tr> 
+<tr>
+<td>Assignment</td> 
+<td>=  +=  -=  *=  /=  %=</td> 
+<td>Right to left</td>
+</tr> 
+</tbody></table>
+
+
+</section>
+<section id="references" class="main-section">
+  <header>References</header>
+  <p>All the documentation in this page is taken from <a href="https://www.tutorialspoint.com/php/">TUTORIALSPOINT</a> </p>
+
+  </section>
+  
+</main>
